@@ -1,4 +1,4 @@
-import { ReactComponentElement, useContext, useEffect, useId } from "react";
+import { useContext, useEffect, useId } from "react";
 import { SwitchContext } from "./switch-context";
 
 interface CaseProps {
