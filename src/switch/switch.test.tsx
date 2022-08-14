@@ -11,7 +11,12 @@ describe("Switch", () => {
         expect(screen.getByText("Test text")).toBeVisible();
     });
 
-    it.todo("should not show a case that does not match the value");
+    it("should not show a case that does not match the value", () => {
+        render(<Switch value={0}>
+            <Case value={1}>Test text</Case>
+        </Switch>);
+        expect(screen.queryByText("Test text")).toBeNull();
+    });
 
     it.todo("should show the default case if no other cases match the value");
 
