@@ -2,7 +2,7 @@
   "name": "react-semantics",
   "version": "1.0.0",
   "description": "semantic based components to simplify react rendering",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "test": "jest"
