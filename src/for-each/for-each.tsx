@@ -11,5 +11,7 @@ export function ForEach<T>({
 }: ForEachProps<T>) {
     const renderItem = typeof children === "function" ? children : () => children;
 
-    return items.map(renderItem);
+    return <>
+        {items.map(renderItem)}
+    </>;
 };

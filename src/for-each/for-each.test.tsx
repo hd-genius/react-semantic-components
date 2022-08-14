@@ -9,7 +9,9 @@ describe("ForEach", () => {
     });
 
     it("should render the content once for each item when the children is a render function", () => {
-        render(<ForEach items={[1, 2, 3]}>{(item: number) => <div key={item}>Test text</div>}</ForEach>);
+        render(<ForEach items={[1, 2, 3]}>
+            {(item: number) => <div key={item}>Test text</div>}
+        </ForEach>);
         expect(screen.getAllByText("Test text")).toHaveLength(3);
     });
 
