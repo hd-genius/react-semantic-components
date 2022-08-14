@@ -2,10 +2,14 @@ import React from "react";
 
 export interface SwitchContextValue {
     value: any,
-    isCaseSatisfied: boolean,
+    satisfiedCases: string[],
+    addSatisfiedCase: (caseId: string) => void,
+    removeSatisfiedCase: (caseId: string) => void,
 }
 
 export const SwitchContext = React.createContext({
     value: null,
-    isCaseSatisfied: false,
+    satisfiedCases: [],
+    addSatisfiedCase: () => {},
+    removeSatisfiedCase: () => {},
 } as SwitchContextValue);
