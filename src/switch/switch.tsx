@@ -2,14 +2,16 @@ import React from "react";
 import { SwitchContext } from "./switch-context";
 
 interface SwitchProps {
+    value: any,
     children: any
 }
 
 export const Switch = ({
-    children
+    value,
+    children,
 }: SwitchProps) => {
     const switchContext = {
-        value: null,
+        value,
         isCaseSatisfied: false,
     };
     return <SwitchContext.Provider value={switchContext}>
