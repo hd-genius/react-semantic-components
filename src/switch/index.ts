@@ -1,2 +1,2 @@
-export { Case, DefaultCase } from "case";
-export { Switch } from "switch";
+export { Case, DefaultCase } from "./case";
+export { Switch } from "./switch";
