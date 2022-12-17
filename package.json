@@ -26,6 +26,10 @@
     "url": "https://github.com/roy-stewart/react-semantics/issues"
   },
   "homepage": "https://github.com/roy-stewart/react-semantics#readme",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
