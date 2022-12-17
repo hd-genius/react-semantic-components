@@ -1,32 +1,7 @@
-# react-library
+# React Semantic Components
 
-# creating your own library
+react-semantic-components is a simple library that aims to make react components simpler and more expressive. It adds components that mirror native javascript semantics, like for loops, switch statements, and if statements. 
 
-- setting up package.json
-- exporting item from library
+# Getting Started
 
-# features
-
-## development
-
-- typescript
-- sass
-
-## CI/CD
-
-## building
-
-- npm clean script
-- npm build script
-
-## testing
-
-- jest
-- @testing-library/react
-- @testing-library/jest-dom
-
-## documentation
-
-- jsdoc
-
-# publishing
+`npm install react-semantic-components`
