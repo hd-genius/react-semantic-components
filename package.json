@@ -4,6 +4,7 @@
   "description": "semantic based components to simplify react rendering",
   "main": "dist/index.js",
   "scripts": {
+    "start": "styleguidist server",
     "build": "rollup -c",
     "clean": "del-cli --force dist",
     "test": "jest",
@@ -11,7 +12,7 @@
     "format:fix": "prettier --write src",
     "lint:check": "eslint",
     "lint:fix": "eslint --fix",
-    "docs": ""
+    "docs": "styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-styleguidist": "^13.0.0",
     "rollup": "^2.77.3",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
