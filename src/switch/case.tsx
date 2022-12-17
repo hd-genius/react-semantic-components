@@ -30,13 +30,3 @@ export const Case = ({ value, children }: CaseProps) => {
     return null;
   }
 };
-
-interface DefaultCaseProps {
-  children: any;
-}
-
-export const DefaultCase = ({ children }: DefaultCaseProps) => {
-  const { satisfiedCases } = useContext(SwitchContext);
-  const isCaseSatisfied = satisfiedCases.length > 0;
-  return isCaseSatisfied ? null : children;
-};
