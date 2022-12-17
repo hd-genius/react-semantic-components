@@ -25,56 +25,11 @@ jobs:
     - name: Build library
       run: npm run build
 
-  unit-test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Pull latest
-      uses: actions/checkout@v2
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-
-    - name: Install dependencies
-      run: npm ci
-
     - name: Run unit tests
       run: npm run test
 
-  format:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Pull latest
-      uses: actions/checkout@v2
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-
-    - name: Install dependencies
-      run: npm ci
-
     - name: Check formatting
       run: npm run format:check
-
-  lint:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Pull latest
-      uses: actions/checkout@v2
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-
-    - name: Install dependencies
-      run: npm ci
 
     - name: Lint code
       run: npm run lint:check
