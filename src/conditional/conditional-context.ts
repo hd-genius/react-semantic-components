@@ -1,7 +1,11 @@
 import { Context, createContext } from "react";
 
-interface ConditionalContextValue {
-    
+export interface ConditionalContextValue {
+    isConditionMet: boolean,
+    setIsCondtionMet: (isMet: boolean) => void,
 }
 
-export const ConditionalContext: Context<ConditionalContextValue> = createContext({});
+export const ConditionalContext: Context<ConditionalContextValue> = createContext({
+    isConditionMet: true,
+    setIsCondtionMet: () => {},
+} as ConditionalContextValue);
