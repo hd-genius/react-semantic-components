@@ -6,6 +6,10 @@ interface ConditonalProps {
     children: any,
 }
 
+/**
+ * the wrapper component that connects If, ElseIf, and Else components
+ * @since 1.2.0
+ */
 export const Conditional: FunctionComponent<ConditonalProps> = ({ children }) => {
     const [isConditionMet, setIsCondtionMet] = useState(true);
     const contextValue: ConditionalContextValue = {
