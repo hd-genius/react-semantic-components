@@ -1,7 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Switch } from "./switch";
-import { Case, DefaultCase } from "./case";
+import { Case } from "./case";
+import { DefaultCase } from "./default-case";
 
 describe("Switch", () => {
   it("should show a case that matches the value", () => {
