@@ -5,6 +5,10 @@ interface TryProps {
   children: any;
 }
 
+/**
+ * a component that catches any errors encountered while rendering its children
+ * @since 1.1.0
+ */
 export class Try extends Component<TryProps> {
   static contextType: Context<TryCatchContextValue> = TryCatchContext;
 
