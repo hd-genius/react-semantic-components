@@ -1,4 +1,4 @@
 export { Switch, Case, DefaultCase } from "./switch";
 export { ForEach } from "./for-each";
 export { If } from "./if";
-export { TryCatch, Try, Catch } from "./try-catch";
+export { ErrorHandler, Try, Catch } from "./error-handler";

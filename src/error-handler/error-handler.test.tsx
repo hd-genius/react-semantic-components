@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Try } from "./try";
-import { TryCatch } from "./try-catch";
+import { ErrorHandler } from "./error-handler";
 import { Catch } from "./catch";
 
-describe("TryCatch", () => {
+describe("ErrorHandler", () => {
   const ComponentWithError = () => {
     throw new Error("some error");
   };
@@ -12,9 +12,9 @@ describe("TryCatch", () => {
   it("should show the Try content when no error is thrown", () => {
     const textContent = "Some text";
     render(
-      <TryCatch>
+      <ErrorHandler>
         <Try>{textContent}</Try>
-      </TryCatch>
+      </ErrorHandler>
     );
     expect(screen.getByText(textContent)).toBeVisible();
   });
@@ -22,12 +22,12 @@ describe("TryCatch", () => {
   it("should not show the Try content when an error is thrown", () => {
     const textContent = "Some text";
     render(
-      <TryCatch>
+      <ErrorHandler>
         <Try>
           <ComponentWithError />
           {textContent}
         </Try>
-      </TryCatch>
+      </ErrorHandler>
     );
     expect(screen.queryByText(textContent)).toBeNull();
   });
@@ -35,12 +35,12 @@ describe("TryCatch", () => {
   it("should show the catch content when an error is thrown", () => {
     const textContent = "Some text";
     render(
-      <TryCatch>
+      <ErrorHandler>
         <Try>
           <ComponentWithError />
         </Try>
         <Catch>{textContent}</Catch>
-      </TryCatch>
+      </ErrorHandler>
     );
     expect(screen.getByText(textContent)).toBeVisible();
   });
@@ -48,10 +48,10 @@ describe("TryCatch", () => {
   it("should not show the catch content when an error is not thrown", () => {
     const textContent = "Some text";
     render(
-      <TryCatch>
+      <ErrorHandler>
         <Try>success</Try>
         <Catch>{textContent}</Catch>
-      </TryCatch>
+      </ErrorHandler>
     );
     expect(screen.queryByText(textContent)).toBeNull();
   });

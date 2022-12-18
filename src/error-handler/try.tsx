@@ -1,5 +1,5 @@
 import { Component, Context, useContext } from "react";
-import { TryCatchContext, TryCatchContextValue } from "./try-catch-context";
+import { TryCatchContext, TryCatchContextValue } from "./error-handler-context";
 
 interface TryProps {
   children: any;

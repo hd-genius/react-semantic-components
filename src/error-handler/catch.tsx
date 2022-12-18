@@ -1,5 +1,5 @@
 import { FunctionComponent, useContext } from "react";
-import { TryCatchContext } from "./try-catch-context";
+import { TryCatchContext } from "./error-handler-context";
 
 interface CatchProps {
   /** the content to show when an error is encountered */
