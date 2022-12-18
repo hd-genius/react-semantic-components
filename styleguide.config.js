@@ -2,7 +2,6 @@ const packageJson = require("./package.json");
 const docGenTypescript = require('react-docgen-typescript');
 
 module.exports = {
-    components: 'src/**/*.tsx',
     version: packageJson.version,
     webpackConfig: {
         module: {
@@ -19,4 +18,23 @@ module.exports = {
     propsParser: docGenTypescript.withCustomConfig(
         './tsconfig.json'
     ).parse,
+    components: 'src/**/*.tsx',
+    sections: [
+        {
+            name: "Conditional",
+            components: "src/if/*.tsx"
+        },
+        {
+            name: "Iteration",
+            components: "src/for-each/*.tsx"
+        },
+        {
+            name: "Switch",
+            components: "src/switch/*.tsx"
+        },
+        {
+            name: "Error Handling",
+            components: "src/try-catch/*.tsx"
+        }
+    ],
 };
