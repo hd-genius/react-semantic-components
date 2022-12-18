@@ -38,7 +38,7 @@ module.exports = {
         {
             name: "Error Handling",
             content: "src/error-handler/section.md",
-            components: "src/try-catch/*.tsx",
+            components: "src/error-handler/*.tsx",
         }
     ],
 };
