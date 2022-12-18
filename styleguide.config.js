@@ -1,5 +1,8 @@
+const packageJson = require("./package.json");
+
 module.exports = {
     components: 'src/**/*.tsx',
+    version: packageJson.version,
     webpackConfig: {
         module: {
             rules: [
