@@ -23,7 +23,7 @@ module.exports = {
         {
             name: "Conditional",
             content: "src/conditional/section.md",
-            components: "src/condtional/*.tsx",
+            components: "src/conditional/*.tsx",
         },
         {
             name: "Iteration",
