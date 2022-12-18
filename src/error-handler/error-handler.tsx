@@ -9,7 +9,9 @@ interface TryCatchProps {
  * a wrapper that links a Try instance with a Catch instance
  * @since 1.1.0
  */
-export const ErrorHandler: FunctionComponent<TryCatchProps> = ({ children }) => {
+export const ErrorHandler: FunctionComponent<TryCatchProps> = ({
+  children,
+}) => {
   const [hasError, setHasError] = useState(false);
 
   const contextValue = {
