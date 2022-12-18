@@ -22,19 +22,23 @@ module.exports = {
     sections: [
         {
             name: "Conditional",
-            components: "src/if/*.tsx"
+            content: "src/if/section.md",
+            components: "src/if/*.tsx",
         },
         {
             name: "Iteration",
-            components: "src/for-each/*.tsx"
+            content: "src/for-each/section.md",
+            components: "src/for-each/*.tsx",
         },
         {
             name: "Switch",
-            components: "src/switch/*.tsx"
+            content: "src/switch/section.md",
+            components: "src/switch/*.tsx",
         },
         {
             name: "Error Handling",
-            components: "src/try-catch/*.tsx"
+            content: "src/try-catch/section.md",
+            components: "src/try-catch/*.tsx",
         }
     ],
 };
