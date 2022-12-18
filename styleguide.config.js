@@ -18,5 +18,5 @@ module.exports = {
     },
     propsParser: docGenTypescript.withCustomConfig(
         './tsconfig.json'
-    ).parse
+    ).parse,
 };
