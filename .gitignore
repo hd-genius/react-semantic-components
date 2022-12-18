@@ -105,3 +105,6 @@ dist
 
 # Docz files
 .docz
+
+# styleguidist
+styleguide
