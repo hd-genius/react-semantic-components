@@ -3,6 +3,7 @@ import { SwitchContext } from "./switch-context";
 import PropTypes from "prop-types";
 
 interface DefaultCaseProps {
+    /** the content to show */
     children: any;
 }
 
@@ -13,9 +14,4 @@ export const DefaultCase = ({ children }: DefaultCaseProps) => {
     const { satisfiedCases } = useContext(SwitchContext);
     const isCaseSatisfied = satisfiedCases.length > 0;
     return isCaseSatisfied ? null : children;
-};
-
-DefaultCase.propTypes = {
-    /** the content to show */
-    children: PropTypes.any,
 };
