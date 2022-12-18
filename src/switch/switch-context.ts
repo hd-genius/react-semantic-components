@@ -10,6 +10,6 @@ export interface SwitchContextValue {
 export const SwitchContext = createContext<SwitchContextValue>({
   value: null,
   satisfiedCases: [],
-  addSatisfiedCase: () => { },
-  removeSatisfiedCase: () => { },
+  addSatisfiedCase: () => {},
+  removeSatisfiedCase: () => {},
 });
