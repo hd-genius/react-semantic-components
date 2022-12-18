@@ -22,8 +22,8 @@ module.exports = {
     sections: [
         {
             name: "Conditional",
-            content: "src/if/section.md",
-            components: "src/if/*.tsx",
+            content: "src/conditional/section.md",
+            components: "src/condtional/*.tsx",
         },
         {
             name: "Iteration",
@@ -39,6 +39,6 @@ module.exports = {
             name: "Error Handling",
             content: "src/error-handler/section.md",
             components: "src/error-handler/*.tsx",
-        }
+        },
     ],
 };
