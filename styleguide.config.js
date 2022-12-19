@@ -60,8 +60,10 @@ module.exports = {
             light: "#bbb",
             lightest: "#aaa",
             link: "#c6d",
-            baseBackground: "#334",
-            sidebarBackground: "#223",
+            baseBackground: "#333",
+            sidebarBackground: "#222",
+            codeBackground: "#181818",
+            codeBase: '#bbb',
         }
     }
 };
