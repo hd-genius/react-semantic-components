@@ -1,4 +1,4 @@
-import { Component, Context, useContext } from "react";
+import { Component, Context } from "react";
 import { TryCatchContext, TryCatchContextValue } from "./error-handler-context";
 
 interface TryProps {
@@ -14,6 +14,16 @@ export class Try extends Component<TryProps> {
 
   context!: TryCatchContextValue;
 
+  state = {
+    hasError: false,
+  };
+
+  static getDerivedStateFromError(error) {
+    return {
+      hasError: true,
+    };
+  }
+
   constructor(props: TryProps) {
     super(props);
   }
@@ -24,7 +34,7 @@ export class Try extends Component<TryProps> {
 
   render() {
     const { children } = this.props;
-    const { hasError } = this.context;
+    const { hasError } = this.state;
     return hasError ? null : children;
   }
 }
