@@ -18,7 +18,7 @@ export class Try extends Component<TryProps> {
     hasError: false,
   };
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError() {
     return {
       hasError: true,
     };
