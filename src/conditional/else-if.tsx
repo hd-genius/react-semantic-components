@@ -1,20 +1,18 @@
-import { useContext, useEffect } from "react";
+import { FunctionComponent, useContext, useEffect } from "react";
 import { ConditionIdContext } from "./condition-id-context";
 import { ConditionalContext } from "./conditional-context";
 
-interface IfProps {
-  /** whether or not the contents should be shown */
+interface ElseIfProps {
   condition: boolean;
-  /** the content to show */
   children?: any;
 }
 
-/**
- * A component that conditionally shows or hides its content
- */
-export const If = ({ condition, children }: IfProps) => {
+export const ElseIf: FunctionComponent<ElseIfProps> = ({
+  condition,
+  children,
+}) => {
   const { conditionId } = useContext(ConditionIdContext);
-  const { addMetCondition, removeMetCondition } =
+  const { metConditions, addMetCondition, removeMetCondition } =
     useContext(ConditionalContext);
 
   useEffect(() => {
@@ -27,5 +25,7 @@ export const If = ({ condition, children }: IfProps) => {
     return () => removeMetCondition(conditionId);
   }, [condition, conditionId]);
 
-  return condition ? children : null;
+  return condition && metConditions.every((id) => id >= conditionId)
+    ? children
+    : null;
 };
