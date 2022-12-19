@@ -1,8 +1,8 @@
-import { FunctionComponent, useContext } from "react"
-import { ConditionalContext } from "./conditional-context"
+import { FunctionComponent, useContext } from "react";
+import { ConditionalContext } from "./conditional-context";
 
 interface ElseProps {
-    children: any,
+  children: any;
 }
 
 /**
@@ -10,6 +10,6 @@ interface ElseProps {
  * @since 1.2.0
  */
 export const Else: FunctionComponent<ElseProps> = ({ children }) => {
-    const { isConditionMet } = useContext(ConditionalContext);
-    return isConditionMet ? null : children;
-}
+  const { isConditionMet } = useContext(ConditionalContext);
+  return isConditionMet ? null : children;
+};
