@@ -2,7 +2,7 @@ import { FunctionComponent, useContext } from "react";
 import { ConditionalContext } from "./conditional-context";
 
 interface ElseProps {
-  children: any;
+  children?: any;
 }
 
 /**

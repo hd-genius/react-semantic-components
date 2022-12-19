@@ -6,7 +6,7 @@ import {
 } from "./conditional-context";
 
 interface ConditonalProps {
-  children: any;
+  children?: any;
 }
 
 /**
