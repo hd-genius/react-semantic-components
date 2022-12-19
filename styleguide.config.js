@@ -2,6 +2,7 @@ const packageJson = require("./package.json");
 const docGenTypescript = require('react-docgen-typescript');
 
 module.exports = {
+    title: "React Semantic Components",
     version: packageJson.version,
     webpackConfig: {
         module: {
