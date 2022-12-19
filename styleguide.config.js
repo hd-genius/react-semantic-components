@@ -1,5 +1,8 @@
 const packageJson = require("./package.json");
 const docGenTypescript = require('react-docgen-typescript');
+const path = require('path');
+
+const capitalizeWord = word => word.charAt(0).toUpperCase() + word.substring(1);
 
 module.exports = {
     title: "React Semantic Components",
@@ -19,6 +22,13 @@ module.exports = {
     propsParser: docGenTypescript.withCustomConfig(
         './tsconfig.json'
     ).parse,
+    getComponentPathLine(componentPath) {
+        const componentName = path.basename(componentPath, ".tsx")
+            .split("-")
+            .map(capitalizeWord)
+            .join("");
+        return `import { ${componentName} } from "react-semantic-components";`;
+    },
     exampleMode: "expand",
     components: 'src/**/*.tsx',
     sections: [
