@@ -7,7 +7,7 @@ interface CatchProps {
 }
 
 /**
- * a component that only shows it's content when the corresponding Try component encounters an error
+ * A component that only shows it's content when the corresponding Try encounters an error.
  * @see {@link Try}
  * @since 1.1.0
  */

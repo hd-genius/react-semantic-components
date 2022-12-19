@@ -6,7 +6,7 @@ interface TryCatchProps {
 }
 
 /**
- * a wrapper that links a Try instance with a Catch instance
+ * A wrapper that links a Try instance with a Catch instance.
  * @since 1.1.0
  */
 export const ErrorHandler: FunctionComponent<TryCatchProps> = ({

@@ -6,7 +6,9 @@ interface TryProps {
 }
 
 /**
- * a component that catches any errors encountered while rendering its children
+ * A component that catches any errors encountered while rendering its children.
+ * This component can be used by itself or in conjunction with an ErrorHandler
+ * and a Catch to provide a fallback when an error is encountered.
  * @since 1.1.0
  */
 export class Try extends Component<TryProps> {
