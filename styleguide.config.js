@@ -30,6 +30,7 @@ module.exports = {
         return `import { ${componentName} } from "react-semantic-components";`;
     },
     exampleMode: "expand",
+    usageMode: "expand",
     components: 'src/**/*.tsx',
     sections: [
         {
