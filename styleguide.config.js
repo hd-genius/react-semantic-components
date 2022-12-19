@@ -54,4 +54,14 @@ module.exports = {
             components: "src/error-handler/*.tsx",
         },
     ],
+    theme: {
+        color: {
+            base: "#d8d8d8",
+            light: "#bbb",
+            lightest: "#aaa",
+            link: "#c6d",
+            baseBackground: "#334",
+            sidebarBackground: "#223",
+        }
+    }
 };
