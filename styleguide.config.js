@@ -18,6 +18,7 @@ module.exports = {
     propsParser: docGenTypescript.withCustomConfig(
         './tsconfig.json'
     ).parse,
+    exampleMode: "expand",
     components: 'src/**/*.tsx',
     sections: [
         {
