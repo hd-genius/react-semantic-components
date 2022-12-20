@@ -4,6 +4,18 @@ const path = require('path');
 
 const capitalizeWord = word => word.charAt(0).toUpperCase() + word.substring(1);
 
+const red = "#f46";
+
+const white = "#d8d8d8";
+
+const purple = "#c6d";
+
+const gray = "#282828";
+
+const black = "#181818";
+
+const blue = "#5af";
+
 module.exports = {
     title: "React Semantic Components",
     version: packageJson.version,
@@ -56,14 +68,35 @@ module.exports = {
     ],
     theme: {
         color: {
-            base: "#d8d8d8",
+            // general
+            base: white,
             light: "#bbb",
             lightest: "#aaa",
-            link: "#c6d",
-            baseBackground: "#333",
-            sidebarBackground: "#222",
-            codeBackground: "#181818",
-            codeBase: '#bbb',
+            link: purple,
+            linkHover: '#e90',
+            focus: 'rgba(22, 115, 177, 0.25)',
+            border: '#e8e8e8',
+            name: purple,
+            type: blue,
+            error: '#c00',
+            baseBackground: gray,
+            sidebarBackground: black,
+            ribbonBackground: '#e90',
+            ribbonText: '#fff',
+                        
+            // code samples
+            codeBackground: black,
+            codeBase: white,
+            codeComment: '#6d6d6d',
+            codePunctuation: '#999',
+            codeProperty: blue, // constants
+            codeDeleted: '#905',
+            codeString: purple, // react properties
+            codeInserted: '#690',
+            codeOperator: '#9a6e3a',
+            codeKeyword: '#1673b1',
+            codeFunction: red,
+            codeVariable: '#e90',
         }
     }
 };
